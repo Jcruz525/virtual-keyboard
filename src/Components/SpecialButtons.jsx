@@ -10,7 +10,7 @@ import ConvertToPdf from "./ConvertToPdf";
 import { Tooltip } from 'react-tooltip';
 
 
-function SpecialButtons({ handleEvent, isUndo, isRedo,text }) {
+export default function SpecialButtons({ handleEvent, isUndo, isRedo,text }) {
   const notify = () => {
     toast("Text is copied to clipboard!");
     handleEvent("copy");
@@ -117,4 +117,4 @@ function SpecialButtons({ handleEvent, isUndo, isRedo,text }) {
   );
 }
 
-export default SpecialButtons;
+

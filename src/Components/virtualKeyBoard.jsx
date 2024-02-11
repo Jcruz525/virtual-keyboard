@@ -258,6 +258,7 @@ function VirtualKeyBoard() {
 
 
     useEffect(() => {
+        if(!emojiActive){
         const handleKeyDown = (event) => {
 
             const isAlphanumeric =
@@ -319,7 +320,8 @@ function VirtualKeyBoard() {
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, [handleEvent]);
+    }
+    }, [handleEvent,emojiActive]);
     
     return (
         <div className="main-container">
